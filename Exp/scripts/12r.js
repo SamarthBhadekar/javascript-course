@@ -60,6 +60,8 @@ document.body.addEventListener("keydown", (event) => {
     playGame("paper");
   } else if (event.key === "s" || event.key === "S") {
     playGame("scissors");
+  } else if (event.key === "a" || event.key === "A") {
+    autoPlay();
   }
 });
 
