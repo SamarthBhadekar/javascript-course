@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exp</title>
+    <link rel="stylesheet" href="/2-copy-of-code/styles/11-todo-list.css" />
+  </head>
+  <body>
+    <button class="js-button">Start</button>
+
+    <button class="js-add-to-cart-button">Add to cart</button>
+    <button onclick="add()">Add</button>
+    <button onclick="remove()">Remove</button>
+
+    <p class="js-message-area"></p>
+    <script>
+      // function addNum(arr, num) {
+      //   return arr.map((nums) => nums + num);
+      // }
+
+      // console.log(addNum([1, 3, 5], 10));
+      let eggsRemoved = 0;
+      function removeEgg(foods) {
+        return foods.filter((food) => {
+          if (food === "egg" && eggsRemoved < 2) {
+            eggsRemoved++;
+            return false;
+          } else return true;
+        });
+      }
+
+      console.log(removeEgg(["egg", "ham", "egg", "bot", "egg", "egg", "ver"]));
+    </script>
+  </body>
+</html>
