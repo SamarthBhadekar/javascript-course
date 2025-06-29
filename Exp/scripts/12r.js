@@ -29,15 +29,18 @@ function autoPlay() {
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
+    document.querySelector(".js-auto-play-button").innerHTML = "Stop Playing";
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+    document.querySelector(".js-auto-play-button").innerHTML = "Autoplay";
   }
 }
 
 document
   .querySelector(".js-auto-play-button")
   .addEventListener("click", () => autoPlay());
+
 document.querySelector(".js-rock-button").addEventListener("click", () => {
   playGame("rock");
 });
